@@ -1,0 +1,11 @@
+{
+    "title": "Login",
+    "submit": "Login",
+    "forgot_password": "Forgot Password?",
+    "not_registered": "Not registered?",
+    "fields": {
+        "email": "Email",
+        "password": "Password",
+        "remember": "Remember me"
+    }
+}

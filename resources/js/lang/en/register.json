@@ -1,0 +1,13 @@
+{
+    "title": "Register",
+    "submit": "Register",
+    "already_registered": "Already registered?",
+    "fields": {
+        "email": "Email",
+        "first_name": "First name",
+        "last_name": "Last name",
+        "middle_name": "Middle name",
+        "password": "Password",
+        "password_confirmation": "Confirm password"
+    }
+}

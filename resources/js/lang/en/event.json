@@ -1,0 +1,50 @@
+{
+    "title": "Events",
+    "apply_filter": "Apply",
+    "create": {
+        "title": "Create event",
+        "submit": "create",
+        "success": "Event successfully created",
+        "fields": {
+            "title": "Title",
+            "description": "Description",
+            "start_at_date": "Start date",
+            "start_at_time": "Start time",
+            "finish_at_date": "Finish date",
+            "finish_at_time": "Finish time",
+            "remind_about_start_at_date": "Date when remind about start",
+            "remind_about_start_at_time": "Time when remind about start",
+            "remind_about_finish_at_date": "Date when remind about finish",
+            "remind_about_finish_at_time": "Time when remind about finish"
+        }
+    },
+    "update": {
+        "title": "Update event",
+        "submit": "update",
+        "success": "Event successfully updated"
+    },
+    "delete": {
+        "title": "Delete event",
+        "description": "Are you sure you want to delete the event"
+    },
+    "read": {
+        "title": "Event"
+    },
+    "table": {
+        "title": "Title",
+        "description": "Description",
+        "start_at": "Start",
+        "finish_at": "Finish",
+        "remind_about_start_at": "Remind about start",
+        "remind_about_finish_at": "Remind about finish",
+        "actions": "Actions"
+    },
+    "pagination": {
+        "per_page": "Per page"
+    },
+    "filters": {
+        "title": "Search title",
+        "start_at": "Select start date",
+        "finish_at": "Select finish date"
+    }
+}

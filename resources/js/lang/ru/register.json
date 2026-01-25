@@ -1,0 +1,13 @@
+{
+    "title": "Регистрация",
+    "submit": "Зарегистрироваться",
+    "already_registered": "Уже зарегистрированы?",
+    "fields": {
+        "email": "Email",
+        "first_name": "Имя",
+        "last_name": "Фамилия",
+        "middle_name": "Отчество",
+        "password": "Пароль",
+        "password_confirmation": "Подтвердите пароль"
+    }
+}

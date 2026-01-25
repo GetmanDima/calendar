@@ -1,0 +1,36 @@
+<?php
+
+declare(strict_types=1);
+
+namespace App\Actions\Fortify;
+
+use App\Contracts\Repositories\UserRepositoryContract;
+use App\DataTransferObjects\User\UpdatePasswordDTO;
+use App\Models\User;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Validator;
+use Laravel\Fortify\Contracts\ResetsUserPasswords;
+
+class ResetUserPassword implements ResetsUserPasswords
+{
+    use PasswordValidationRules;
+
+    public function __construct(
+        private readonly UserRepositoryContract $userRepository,
+    ) {}
+
+    /**
+     * Validate and reset the user's forgotten password.
+     *
+     * @param  array<string, string>  $input
+     */
+    public function reset(User $user, array $input): void
+    {
+        Validator::make($input, [
+            'password' => $this->passwordRules(),
+        ])->validate();
+
+        $updatePasswordDTO = new UpdatePasswordDTO(Hash::make($input['password']));
+        $this->userRepository->update($user->id, $updatePasswordDTO);
+    }
+}

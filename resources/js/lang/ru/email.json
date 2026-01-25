@@ -1,0 +1,8 @@
+{
+    "title": "Email",
+    "submit": "Обновить",
+    "successful_update": "Email обновлен",
+    "fields": {
+        "email": "email"
+    }
+}

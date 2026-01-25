@@ -1,0 +1,16 @@
+{
+    "required": "Required",
+    "max_length": "Maximum length is",
+    "auth": {
+        "email": "Invalid Email",
+        "name": "The :field must contain only alphabetic characters",
+        "password": "Password must contain 8 - 64 characters",
+        "password_confirmation": "Password and confirmation must be equal"
+    },
+    "event": {
+        "finish_must_later_than_start": "Finish date must be later than start date",
+        "remind_must_earlier_than_start": "Remind date must be earlier than start date",
+        "remind_must_earlier_than_finish": "Remind date must be earlier than finish date",
+        "remind_must_earlier_than_now": "Remind date must be earlier than now"
+    }
+}

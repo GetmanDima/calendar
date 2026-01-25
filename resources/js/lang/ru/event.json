@@ -1,0 +1,50 @@
+{
+    "title": "События",
+    "apply_filter": "Применить",
+    "create": {
+        "title": "Новое событие",
+        "submit": "Создать",
+        "success": "Событие создано",
+        "fields": {
+            "title": "Заголовок",
+            "description": "Описание",
+            "start_at_date": "Дата начала",
+            "start_at_time": "Время начала",
+            "finish_at_date": "Дата окончания",
+            "finish_at_time": "Время окончания",
+            "remind_about_start_at_date": "Дата напоминания о начале",
+            "remind_about_start_at_time": "Время напоминания о начале",
+            "remind_about_finish_at_date": "Дата напоминания об окончании",
+            "remind_about_finish_at_time": "Время напоминания об окончании"
+        }
+    },
+    "update": {
+        "title": "Обновить событие",
+        "submit": "Обновить",
+        "success": "Событие успешно обновлено"
+    },
+    "delete": {
+        "title": "Удалить событие",
+        "description": "Вы уверены, что хотите удалить событие"
+    },
+    "read": {
+        "title": "Событие"
+    },
+    "table": {
+        "title": "Заголовок",
+        "description": "Описание",
+        "start_at": "Начало",
+        "finish_at": "Окончание",
+        "remind_about_start_at": "Напоминание о начале",
+        "remind_about_finish_at": "Напоминание об окончании",
+        "actions": "Действия"
+    },
+    "pagination": {
+        "per_page": "На странице"
+    },
+    "filters": {
+        "title": "Поиск по заголовку",
+        "start_at": "Выберите дату начала",
+        "finish_at": "Выберите дату окончания"
+    }
+}

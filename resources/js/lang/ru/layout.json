@@ -1,0 +1,9 @@
+{
+    "language": "Язык",
+    "modals": {
+        "actions": {
+            "close": "Закрыть",
+            "confirm": "Подтвердить"
+        }
+    }
+}

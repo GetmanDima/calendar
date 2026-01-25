@@ -1,0 +1,9 @@
+{
+    "title": "Email Verification",
+    "description": "Please verify email",
+    "resend": "Send verification email again",
+    "logout": "Logout",
+    "in_process": "Email verification in process",
+    "success": "Your email has been verified successfully! Redirect...",
+    "email_sent": "Verification email sent successfully!"
+}

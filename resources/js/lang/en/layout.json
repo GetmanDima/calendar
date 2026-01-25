@@ -1,0 +1,9 @@
+{
+    "language": "Language",
+    "modals": {
+        "actions": {
+            "close": "Close",
+            "confirm": "Confirm"
+        }
+    }
+}
