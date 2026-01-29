@@ -37,8 +37,8 @@ Setting up the development environment is straightforward with Docker.
 
 4.  **Application Setup**:
     ```bash
-    docker compose exec -it app composer run setup
-    docker compose exec -it app php artisan db:seed
+    docker exec -it calendar_app composer run setup
+    docker exec -it calendar_app php artisan db:seed
     ```
 
 5.  **Frontend Development**:
@@ -50,6 +50,25 @@ Setting up the development environment is straightforward with Docker.
     ```bash
     npm install
     npm run dev
+    ```
+
+## 🚀 Getting Started: Production Environment
+1.  **Clone the Repository**:
+    ```bash
+    git clone https://github.com/GetmanDima/calendar
+    cd calendar
+    ```
+
+2.  **Configure Environment**:
+    ```bash
+    cp .env.prod.example .env
+    ```
+    *You may customize database credentials and other settings inside `.env`.*
+    *You also should fill APP_KEY in .env*
+
+3.  **Launch Services**:
+    ```bash
+    docker compose -f docker-compose.prod.yml up -d --build
     ```
 
 ## 🌐 Application & Service URLs
@@ -72,7 +91,7 @@ These routes are protected by Basic Authentication. Credentials can be found and
 
 -   **Run backend tests**:
     ```bash
-    docker exec -it app composer run test
+    docker exec -it calendar_app composer run test
     ```
 
 -   **Run frontend tests**:
@@ -86,23 +105,23 @@ These routes are protected by Basic Authentication. Credentials can be found and
 
 -   **Generate Model PHPDocs**:
     ```bash
-    docker exec -it app composer run ide-helper
+    docker exec -it calendar_app composer run ide-helper
     ```
 
 -   **Generate API Documentation**:
     To regenerate the Scribe API documentation.
     ```bash
-    docker exec -it app composer run docs
+    docker exec -it calendar_app composer run docs
     ```
 
 -   **Run phpstan**:
     ```bash
-    docker exec -it app composer run phpstan
+    docker exec -it calendar_app composer run phpstan
     ```
 
 -   **Run pint**:
     ```bash
-    docker exec -it app composer run pint
+    docker exec -it calendar_app composer run pint
     ```
 
 -   **Run eslint**:

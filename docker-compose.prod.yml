@@ -1,40 +1,17 @@
 services:
-  node:
-    image: node:24-alpine
-    working_dir: /var/www
-    volumes:
-      - ./:/var/www
-    profiles:
-      - node
-    ports:
-      - '5173:5173'
-    networks:
-      - calendar
-
   app:
     build:
       context: .
-      dockerfile: .docker/app/Dockerfile
+      dockerfile: .docker/app/Dockerfile.prod
     container_name: calendar_app
+    ports:
+      - '${NGINX_EXT_PORT:-8000}:80'
     working_dir: /var/www
     volumes:
-      - ./:/var/www
+      - storage_data:/var/www/storage
     depends_on:
       - mysql
       - redis
-    networks:
-      - calendar
-
-  nginx:
-    image: nginx:alpine
-    container_name: calendar_nginx
-    ports:
-      - '${NGINX_EXT_PORT:-8000}:80'
-    volumes:
-      - ./:/var/www
-      - ./.docker/nginx/default.conf:/etc/nginx/conf.d/default.conf
-    depends_on:
-      - app
     networks:
       - calendar
 
@@ -45,7 +22,7 @@ services:
       - '${MYSQL_EXT_PORT:-3306}:3306'
     environment:
       MYSQL_DATABASE: ${DB_DATABASE:-calendar}
-      MYSQL_USER: ${DB_DATABASE:-calendar}
+      MYSQL_USER: ${DB_USERNAME:-calendar}
       MYSQL_PASSWORD: ${DB_PASSWORD:-secret}
       MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD:-secret}
     volumes:
@@ -64,18 +41,10 @@ services:
     networks:
       - calendar
 
-  mailpit:
-    image: axllent/mailpit
-    container_name: calendar_mailpit
-    ports:
-      - '${MAILPIT_WEB_EXT_PORT:-8025}:8025'
-      - '${MAILPIT_SMTP_EXT_PORT:-1025}:1025'
-    networks:
-      - calendar
-
 networks:
   calendar:
 
 volumes:
+  storage_data:
   calendar_mysql_data:
   calendar_redis_data:
