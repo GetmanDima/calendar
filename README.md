@@ -69,6 +69,7 @@ Setting up the development environment is straightforward with Docker.
 3.  **Launch Services**:
     ```bash
     docker compose -f docker-compose.prod.yml up -d --build
+    docker exec -it calendar_app php artisan migrate
     ```
 
 ## 🌐 Application & Service URLs

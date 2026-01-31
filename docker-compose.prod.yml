@@ -5,7 +5,7 @@ services:
       dockerfile: .docker/app/Dockerfile.prod
     container_name: calendar_app
     ports:
-      - '${NGINX_EXT_PORT:-8000}:80'
+      - '${NGINX_EXT_PORT:-80}:80'
     working_dir: /var/www
     volumes:
       - storage_data:/var/www/storage

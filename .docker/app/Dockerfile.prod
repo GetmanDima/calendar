@@ -1,13 +1,12 @@
 FROM node:24-alpine AS frontend
 WORKDIR /var/www
 COPY . .
-RUN npm install
+RUN npm ci
 RUN npm run build
 
 FROM php:8.4-fpm
 
 ENV APP_ENV=production
-ENV LOG_CHANNEL=stderr
 
 RUN apt-get update && apt-get install -y \
     supervisor \
